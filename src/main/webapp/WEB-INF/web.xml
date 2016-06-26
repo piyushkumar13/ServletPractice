@@ -1,0 +1,178 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<context-param>
+		<param-name>organisation_name</param-name>
+		<param-value>My_Org</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>db_name</param-name>
+		<param-value>My_DB</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>db_password</param-name>
+		<param-value>Password1</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name> FilterExample</filter-name>
+		<filter-class>com.practice.filters.FilterExample</filter-class>
+		<init-param>
+			<param-name>filter-token</param-name>
+			<param-value>YES</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>FilterExample</filter-name>
+		<url-pattern>/httpservlet</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>ServletExample</servlet-name>
+		<servlet-class>com.practice.servlet.ServletExample</servlet-class>
+
+		<init-param>
+			<param-name>email_address</param-name>
+			<param-value>xyz@gmail.com</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>author_name</param-name>
+			<param-value>Piyush Kumar</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet>
+		<servlet-name>GenericServletExample</servlet-name>
+		<servlet-class>com.practice.servlet.GenericServletExample</servlet-class>
+
+		<init-param>
+			<param-name>generic_email_address</param-name>
+			<param-value>abc@gmail.com</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>generic_author_name</param-name>
+			<param-value>Kumar Piyush</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet>
+		<servlet-name>RequestDispatcherExample1</servlet-name>
+		<servlet-class>com.practice.servlet.RequestDispatcherExample1</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RequestDispatcherExample2</servlet-name>
+		<servlet-class>com.practice.servlet.RequestDispatcherExample2</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>HttpServletExample</servlet-name>
+		<servlet-class>com.practice.httpservlet.HttpServletExample</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>UrlRewrittingExample</servlet-name>
+		<servlet-class>com.practice.httpservlet.UrlRewrittingExample</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>AddCookiesExample</servlet-name>
+		<servlet-class>com.practice.httpservlet.AddCookiesExample</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ViewCookiesExample</servlet-name>
+		<servlet-class>com.practice.httpservlet.ViewCookiesExample</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>HttpSessionExample</servlet-name>
+		<servlet-class>com.practice.httpservlet.HttpSessionExample</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>HttpSessionProfileExample</servlet-name>
+		<servlet-class>com.practice.httpservlet.HttpSessionProfileExample</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>HttpSessionViewProfile</servlet-name>
+		<servlet-class>com.practice.httpservlet.HttpSessionViewProfile</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>HttpSessionLogout</servlet-name>
+		<servlet-class>com.practice.httpservlet.HttpSessionLogout</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ServletExample</servlet-name>
+		<url-pattern>/servlet/first</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenericServletExample</servlet-name>
+		<url-pattern>/servlet/generic</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RequestDispatcherExample1</servlet-name>
+		<url-pattern>/servlet/dispatcher1</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RequestDispatcherExample2</servlet-name>
+		<url-pattern>/servlet/dispatcher2</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HttpServletExample</servlet-name>
+		<url-pattern>/httpservlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UrlRewrittingExample</servlet-name>
+		<url-pattern>/httpservlet/urlrewritting</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AddCookiesExample</servlet-name>
+		<url-pattern>/httpservlet/addcookies</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ViewCookiesExample</servlet-name>
+		<url-pattern>/httpservlet/viewcookies</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HttpSessionExample</servlet-name>
+		<url-pattern>/httpsession</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HttpSessionProfileExample</servlet-name>
+		<url-pattern>/httpsession/profile</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HttpSessionViewProfile</servlet-name>
+		<url-pattern>/httpsession/viewprofile</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HttpSessionLogout</servlet-name>
+		<url-pattern>/httpsession/logout</url-pattern>
+	</servlet-mapping>
+</web-app>

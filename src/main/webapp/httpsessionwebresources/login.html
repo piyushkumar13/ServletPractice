@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HttpSessionManagement</title>
+</head>
+<body>
+	<!--
+	
+	Initial url is http://localhost:8080/servletpractice/httpsessionwebresources/login.html
+	if I use action = "httpsession", the url in the browser will be resolved as http://localhost:8080/servletpractice/httpsessionwebresources/httpsession 
+	if I use action = "/httpsession", the url in the browser will be resolved as http://localhost:8080/httpsession
+	if I use action ="/servletpractice/httpsession", the url in the browser will be resolved as http://localhost:8080/servletpractice/httpsession
+	In nutshell, 
+	If we use the path with "/" - it will be considered as the context relative path.
+	If we use the path without "/" - it will be considered as the request relative path.
+	
+	In case of giving path in action =".." or <a href =".."/> or response.sendRedirect(".."), if we give the path starting with "/"
+	i.e context path, we have to include the "/servletpractice" which is the context of the project. But, now the question is since
+	the path starting with the / sign i.e the context relative path we should not include the /servletpractice. Then, why we have to
+	include the /servletpractice. The answer is because for href, action, and response.sendRedirect(..) context path is http://localhost:8080
+	since these element creates the fresh new request.
+	
+	But, in case of req.getRequestDispatcher("/toPathToServlet"), when we give the context path i.e starting with "/", we dont need
+	to give the project context path i.e /servletpractice here. Just till the path to servlet defined in the web.xml starting with "/"
+	
+	Contextpath - The Context path terminology is used in the web development.The searching point is taken form the root directory of 
+	web application to find a web page. The context path always starts with forward slash.
+	
+	Context relative path -  It is the relative path of the resourse to the context path. Ex - lets say here, in this project,
+	context path(i.e root directory) is servletpractice. And lets say relative path of some servlet is /servlet/first. Then, in
+	context relative path we just need to give /servlet/first starting with "/" but in this case, the container will get the context
+	path i.e /servletpractive and will append the context relative path i.e /servlet/first to the context path.
+	
+	Request relative path - It is the path relative to the current request. It starts without "/".
+	-->
+	<form action="/servletpractice/httpsession" method="post">
+
+		<table>
+			<tr>
+				<td>Name :</td>
+				<td><input type="text" name="uname" /></td>
+			</tr>
+
+			<tr>
+				<td>Password :</td>
+				<td><input type="password" name="upassword" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="login with http session" /></td>
+			</tr>
+
+		</table>
+
+	</form>
+
+</body>
+</html>
