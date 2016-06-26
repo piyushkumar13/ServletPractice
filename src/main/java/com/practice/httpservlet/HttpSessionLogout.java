@@ -26,7 +26,6 @@ public class HttpSessionLogout extends HttpServlet {
 			request.getRequestDispatcher("/servletcontext/httpsessionwebresources/login.html").include(request,
 					response);
 		}
-
 	}
 
 }
